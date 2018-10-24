@@ -1,6 +1,5 @@
 Specs:
 
-
 constuctor(name, brand, price(int), alcoholContent(int), pint(int))
 
 
@@ -10,6 +9,7 @@ Next to each keg is an edit button to edit that keg with hide/show options
 also next to each keg is a sell button, if clicked decrease pint by one
 if pints is less than 10, give warning(by background color or alert)
 
+Add button after table to add new beers.
 
 price
 pint > $5 orange

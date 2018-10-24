@@ -1,0 +1,24 @@
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Brand</th>
+      <th scope="col">Price ($)</th>
+      <th scope="col">ABV</th>
+      <th scope="col">Pint</th>
+      <th scope="col">Edit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr  [class]="pintLight(beer)" [ngStyle]="priceColor(beer)" *ngFor="let beer of childBeerList">
+      <td>{{beer.name}}</td>
+      <td>{{beer.brand}}</td>
+      <td>${{beer.price}}</td>
+      <td>{{beer.abv}}% &nbsp;<i [class]="iconBeer(beer)"></i><i class="iconBeer(beer)"></i><i [class]="iconBeer(beer)"></i></td>
+      <!--template statement needs the instance variable used in the ngFor loop. instance variable = beer  -->
+      <td><button (click)="sellPint(beer)" class="btn btn-primary">{{beer.pint}}</button></td>
+      <td><button (click)="editButtonClicked(beer)" class="btn btn-success">Edit</button></td>
+    </tr>
+  </tbody>
+</table>

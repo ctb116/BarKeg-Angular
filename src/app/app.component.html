@@ -1,25 +1,14 @@
 <h1 class="jumbotron">{{title}}</h1>
 
 <div class="container">
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Brand</th>
-      <th scope="col">Price ($)</th>
-      <th scope="col">ABV</th>
-      <th scrope="col">Pint</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let beer of beers">
-      <td>{{beer.name}}</td>
-      <td>{{beer.brand}}</td>
-      <td>${{beer.price}}</td>
-      <td>{{beer.ABV}}%</td>
-      <!--template statement needs the instance variable used in the ngFor loop. instance variable = beer  -->
-      <td><button (click)="sellPint(beer)" class="btn btn-primary">{{beer.pint}}</button></td>
-    </tr>
-  </tbody>
-</table>
+<app-beer-list [childBeerList] = "masterBeerList" (clickSender)= "editBeer($event)">Hello loading....</app-beer-list>
+<!-- <button class="btn btn-warning" [(ngModel)]="">Add New Beer</button> -->
+<div *ngIf="selectedBeer">
+  <input [(ngModel)]="selectedBeer.name">
+  <input [(ngModel)]="selectedBeer.brand">
+  <input [(ngModel)]="selectedBeer.price">
+  <input [(ngModel)]="selectedBeer.abv">
+  <button (click)="finishedEditing()" class="btn btn-info">Done</button>
+</div>
+
 </div>

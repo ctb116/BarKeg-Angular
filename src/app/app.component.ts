@@ -9,18 +9,20 @@ import { BeerBar } from './model/beerbar.model';
 export class AppComponent {
   title: string = 'Welcome to the Cocoroco Bar!';
 
-
-  beers: BeerBar[] = [
-    new BeerBar('Cider', 'Angry Orchard', 4.50, 3.4, 124),
-    new BeerBar('IPA', 'Deschutes Brewery', 7.40, 9.2, 124),
-    new BeerBar('Stout', 'Cocoroco', 10.90, 12.0, 124)
+  masterBeerList: BeerBar[] = [
+    new BeerBar('Cider', 'Angry Orchard', 4.50, 3.4, 15),
+    new BeerBar('IPA', 'Deschutes Brewery', 7.40, 9.2, 15),
+    new BeerBar('Stout', 'Cocoroco', 10.90, 12.0, 15)
   ];
 
+selectedBeer: BeerBar = null;
 
+editBeer(clickedBeer) {
+  this.selectedBeer = clickedBeer;
+}
 
-  sellPint(beer) {
-  beer.pint--;
-
-  }
+finishedEditing() {
+  this.selectedBeer = null;
+}
 
 }
