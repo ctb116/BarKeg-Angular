@@ -25,4 +25,8 @@ finishedEditing() {
   this.selectedBeer = null;
 }
 
+addBeer(newBeer: BeerBar) {
+  this.masterBeerList.push(newBeer);
+}
+
 }

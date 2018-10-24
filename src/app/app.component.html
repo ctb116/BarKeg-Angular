@@ -2,6 +2,7 @@
 
 <div class="container">
 <app-beer-list [childBeerList] = "masterBeerList" (clickSender)= "editBeer($event)">Hello loading....</app-beer-list>
+<app-new-beer (sendBeer)="addBeer($event)"></app-new-beer>
 <!-- <button class="btn btn-warning" [(ngModel)]="">Add New Beer</button> -->
 <div *ngIf="selectedBeer">
   <input [(ngModel)]="selectedBeer.name">
