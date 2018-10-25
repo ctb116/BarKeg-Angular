@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #dadbdd;
+}
+
+#center {
+  margin: 0 auto;
+
+}
+
+.crop {
+  position: relative;
+  height: 390px;
+  width: 460px;
+  overflow: hidden;
+}
+
+
+
+.crop #cocoLogo{
+  height: 400px;
+  width: 470px;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  right: -9999px;
+  bottom: -9999px;
+  margin: auto;
+}

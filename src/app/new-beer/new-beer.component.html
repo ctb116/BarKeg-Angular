@@ -1,26 +1,27 @@
-<button ng-click="showme=true">Add New Beer</button>
-<div ng-show="showme">
+<button (click)="showme=true">Add New Beer</button>
+<div *ngIf="showme">
+<form class="form-group">
 <div>
  <label>Enter a Name:</label>
- <input #newName>
+ <input #newName class="form-control">
 </div>
 <div>
  <label>Enter a Brand:</label>
- <input #newBrand>
+ <input #newBrand class="form-control">
 </div>
 <div>
  <label>Enter a Price:</label>
- <input #newPrice>
+ <input #newPrice class="form-control">
 </div>
 <div>
  <label>Enter a ABV:</label>
- <input #newAbv>
+ <input #newAbv class="form-control">
 </div>
 <div>
 <label>Enter a Pint:</label>
-<input #newPint>
+<input #newPint class="form-control">
 </div>
 <p ng-hide="showme"></p>
-<button (click) = "submitForm(newName.value, newBrand.value, newPrice.value, newAbv.value, newPint.value); newName.value=''; newBrand.value=''; newPrice.value=''; newAbv.value=''; newPint.value='';">Add</button>
-<button ng-click="showme=false">Hide</button>
+<button (click) = "showme=false; submitForm(newName.value, newBrand.value, newPrice.value, newAbv.value, newPint.value); newName.value=''; newBrand.value=''; newPrice.value=''; newAbv.value=''; newPint.value='';">Add</button>
+</form>
 </div>

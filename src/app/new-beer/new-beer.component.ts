@@ -11,13 +11,8 @@ export class NewBeerComponent {
 submitForm(name: string, brand: string, price: number, abv: number, pint: number){
   let newBeer: BeerBar = new BeerBar(name, brand, price, abv, pint);
   this.sendBeer.emit(newBeer);
-  // this.addNewBeer = null;
 }
-// addNewBeer: BeerBar = null;
-//
-// addBeerMenu(clickedAdd) {
-//   this.addNewBeer = clickedAdd;
-// }
+
 
 
 }

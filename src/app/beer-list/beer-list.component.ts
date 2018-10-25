@@ -40,9 +40,9 @@ editButtonClicked(beerToEdit : BeerBar){
     if(beer.abv >2 && beer.abv <4){
       return "fa fa-beer";
     } else if(beer.abv >5 && beer.abv <9){
-      return "fa fa-free-code-camp";
+      return "fa fa-beer";
     }else{
-      return "fa fa-bar-chart";
+      return "fa fa-free-code-camp";
     }
   }
 
