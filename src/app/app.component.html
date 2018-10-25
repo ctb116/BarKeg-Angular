@@ -1,4 +1,4 @@
-<h1 class="jumbotron">{{title}}</h1>
+
 
 <div class="container">
 <app-beer-list [childBeerList] = "masterBeerList" (clickSender)= "editBeer($event)">Hello loading....</app-beer-list>
@@ -11,5 +11,7 @@
   <input [(ngModel)]="selectedBeer.abv">
   <button (click)="finishedEditing()" class="btn btn-info">Done</button>
 </div>
-
+<div class="crop">
+<img id="footerimg" src="../img/footer.jpg">
+</div>
 </div>
